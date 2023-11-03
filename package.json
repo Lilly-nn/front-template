@@ -19,6 +19,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.17.2",
     "@auth0/auth0-spa-js": "^2.0.3",
     "@emotion/cache": "^11.10.5",
     "@emotion/react": "^11.10.6",

@@ -27,6 +27,8 @@ import 'reset-css';
 import 'normalize.css';
 // components
 import { SettingsProvider } from '../components/settings';
+import { ConfigProvider } from 'antd';
+import theme from 'src/theme/themeConfig';
 
 // ----------------------------------------------------------------------
 
@@ -54,7 +56,9 @@ export default function MyApp(props: MyAppProps) {
       <ReduxProvider store={store}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <SettingsProvider>
-            <ThemeLocalization>{getLayout(<Component {...pageProps} />)}</ThemeLocalization>
+            <ConfigProvider theme={theme}>
+              <ThemeLocalization>{getLayout(<Component {...pageProps} />)}</ThemeLocalization>
+            </ConfigProvider>
           </SettingsProvider>
         </LocalizationProvider>
       </ReduxProvider>

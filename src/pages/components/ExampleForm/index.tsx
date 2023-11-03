@@ -19,7 +19,7 @@ export default function ExampleForm(): JSX.Element {
           {errors?.firstName && <p>{errors.firstName.message}</p>}
           <TextField {...register('lastName')} fullWidth label="Email" />
           {errors?.lastName && <p>{errors.lastName.message}</p>}
-          <Button variant="outlined" type="submit">
+          <Button variant="outlined" type="submit" color="primary">
             Submit
           </Button>
         </Stack>
